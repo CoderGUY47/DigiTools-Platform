@@ -3,12 +3,12 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="relative min-h-162.5 flex items-center overflow-hidden w-[80%] mx-auto">
-
+    <>
+      <div className="relative min-h-162.5 mt-14 md:mt-30 flex items-center overflow-hidden w-[80%] mx-auto flex flex-col">
         <div className="relative mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center space-y-4">
           {/* leftpart */}
           <div className="text-center lg:text-left">
-            <div className="p-2 h-10 w-80 flex items-center justify-center gap-3 text-lg bg-gray-200 rounded-full text-indigo-500">
+            <div className="p-2 h-10 w-80 flex items-center justify-center gap-3 text-lg bg-gray-400/45 rounded-full text-indigo-500">
               <span className="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></span>
               New: AI-Powered Tools Available
             </div>
@@ -34,11 +34,16 @@ const page = () => {
           </div>
 
           {/* right part */}
-          <div className="image">
-              <img src="/images/banner.png" alt="banner" className="w-full max-w-lg mx-auto rounded-3xl h-[550px] object-cover"/>
-            </div>
+          <div className="image flex justify-end self-end">
+            <img
+              src="/images/banner.png"
+              alt="banner"
+              className="w-full max-w-lg rounded-3xl h-[550px] object-cover"
+            />
           </div>
         </div>
+      </div>
+    </>
   );
 };
 
