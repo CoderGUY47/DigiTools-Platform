@@ -1,43 +1,72 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import Cart from "../Cart/page";
+import { toast } from "react-toastify";
 
-const page = ({ productDataPromise }) => {
+const page = ({ productDataPromise, activeTab, setActiveTab, carts, setCarts }) => {
   const productData = use(productDataPromise);
-  console.log(productData);
+
+  const handleAddToCart = (product) => {
+    toast.success(`${product.name} added to cart!`);
+    setCarts([...carts, product]);
+  };
+
+  const handleRemoveFromCart = (index) => {
+    toast(`${carts[index].name} removed from cart.`);
+    setCarts(carts.filter((_, i) => i !== index));
+  };
 
   return (
-    <div className="pt-20 mb-20">
+    <div className="pt-20 mb-20 px-6">
       <div className="flex flex-col items-center justify-center text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
           Premium Digital Tools
         </h1>
-        <p className="max-w-2xl font-medium text-gray-400 text-lg md:text-xl leading-relaxed">
+        <p className="max-w-2xl font-medium text-gray-500 text-lg md:text-xl leading-relaxed opacity-85">
           Choose from our curated collection of premium digital products
           designed to boost your productivity and creativity.
         </p>
 
-        <div className="flex items-center gap-3 mt-12 p-1.5 bg-gray-50 rounded-full border border-gray-100 shadow-xs">
-          <button className="px-8 py-3 bg-linear-to-tl from-violet-600 to-indigo-600 text-white rounded-full font-bold shadow-lg shadow-violet-100 transition-all">
+        <div className="flex items-center gap-2 mt-12 p-1.5 bg-gray-100 rounded-full border border-gray-200 shadow-xs">
+          <button
+            onClick={() => setActiveTab("Products")}
+            className={`px-10 py-3 rounded-full font-bold text-lg transition-all duration-300 cursor-pointer ${
+              activeTab === "Products"
+                ? "bg-linear-to-tl from-violet-600 to-indigo-600 text-white shadow-xl shadow-violet-200"
+                : "text-gray-500 hover:text-gray-800"
+            }`}
+          >
             Products
           </button>
-          <button className="px-8 py-3 text-gray-600 hover:text-violet-600 rounded-full font-bold transition-all cursor-pointer select-none">
-            Cart (0)
+          <button
+            onClick={() => setActiveTab("Cart")}
+            className={`px-10 py-3 rounded-full font-bold text-lg transition-all duration-300 cursor-pointer ${
+              activeTab === "Cart"
+                ? "bg-linear-to-tl from-violet-600 to-indigo-600 text-white shadow-xl shadow-violet-200"
+                : "text-gray-500 hover:text-gray-800"
+            }`}
+          >
+            Cart ({carts.length})
           </button>
         </div>
       </div>
 
-      <div>
-        <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {activeTab === "Products" && (
+        <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
           {productData.map((product) => (
-            <div className="glass card w-full h-full flex flex-col bg-black text-white/80 shadow-[2px_10px_30px_rgba(0,0,0,0.4)] rounded-3xl">
+            <div key={product.id}
+              className="glass card w-full h-full flex flex-col bg-black text-white/80 shadow-[2px_10px_30px_rgba(0,0,0,0.4)] rounded-3xl"
+            >
               <div className="card-body p-8 flex flex-row justify-between items-center gap-2">
                 <img className="w-16 h-12 object-contain" src={product.icon} alt={product.name} />
-                <span
-                  className={`badge px-4 py-3 rounded-full text-xs font-semibold uppercase tracking-wider ${
-                    product.tagType === "popular" ? "glass bg-amber-500/80 text-amber-50 border-amber-500/50"
-                        : product.tagType === "best seller" ? "glass bg-green-600/80 text-green-50 border-green-500/50"
-                        : product.tagType === "new" ? "glass bg-violet-500/50 text-violet-50 border-violet-500/50"
-                        : "glass bg-gray-500/50 text-gray-50 border-gray-500/50"
+                <span className={`badge px-4 py-3 rounded-full text-xs font-semibold uppercase tracking-wider ${
+                    product.tagType === "popular"
+                      ? "glass bg-amber-500/80 text-amber-50 border-amber-500/50"
+                      : product.tagType === "best seller"
+                      ? "glass bg-green-600/80 text-green-50 border-green-500/50"
+                      : product.tagType === "new"
+                      ? "glass bg-violet-500/50 text-violet-50 border-violet-500/50"
+                      : "glass bg-gray-500/50 text-gray-50 border-gray-500/50"
                   }`}
                 >
                   {product.tag}
@@ -51,28 +80,47 @@ const page = ({ productDataPromise }) => {
                   {product.description}
                 </p>
                 <div className="mt-auto">
-                    <p className="flex items-baseline text-3xl font-black text-white">${product.price}
-                        <span className="text-sm font-normal text-gray-300 block opacity-70">/{product.period}</span>
-                    </p>
-                    <ul className="mt-6 space-y-3">
-                    {product.features.map((feature) => (
-                        <li className="flex items-center gap-3 text-sm text-gray-400 font-medium">
+                  <p className="flex items-baseline text-3xl font-black text-white">
+                    ${product.price}
+                    <span className="text-sm font-normal text-gray-300 block opacity-70">
+                      /{product.period}
+                    </span>
+                  </p>
+                  <ul className="mt-6 space-y-3">
+                    {product.features.map((feature, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-3 text-sm text-gray-400 font-medium"
+                      >
                         <FaCheck className="text-violet-500 shrink-0" />
                         <span className="line-clamp-1">{feature}</span>
-                        </li>
+                      </li>
                     ))}
-                    </ul>
-                    <div className="card-actions justify-center mt-8">
-                    <button className="w-full py-4 bg-linear-to-tl from-violet-600 to-indigo-600 text-white text-xs uppercase rounded-2xl font-black tracking-widest shadow-xl shadow-violet-900/20 hover:scale-101 active:scale-95 transition-all">
-                        Buy Now
+                  </ul>
+                  <div className="card-actions justify-center mt-8">
+                    <button
+                      onClick={() => handleAddToCart(product)}
+                      className="w-full py-4 bg-linear-to-tl from-violet-600 to-indigo-600 text-white text-base uppercase rounded-2xl font-bold tracking-widest shadow-xl shadow-violet-900/20 cursor-pointer transition-all"
+                    >
+                      Buy Now
                     </button>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      )}
+
+      {activeTab === "Cart" && (
+        <div className="animate-in fade-in slide-in-from-bottom-5 duration-500">
+          <Cart 
+            carts={carts} 
+            onRemove={handleRemoveFromCart}
+            onBack={() => setActiveTab("Products")}
+          />
+        </div>
+      )}
     </div>
   );
 };

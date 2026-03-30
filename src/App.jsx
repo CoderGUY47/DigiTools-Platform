@@ -5,7 +5,11 @@ import UserCounts from "./components/UserCounts/page";
 import Tools from "./components/Tools/page";
 import Steps from "./components/Steps/page";
 import PricingOption from "./components/PricingOption/page";
-
+import Workflow from "./components/Workflow/page";
+import Footer from "./components/Footer/page";
+import { useState } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const getPricingData = async () => {
@@ -28,18 +32,35 @@ const stepDataPromise = stepData();
 const pricingPlansPromise = pricingData();
 
 function App() {
+  const [activeTab, setActiveTab] = useState("Products");
+  const [carts, setCarts] = useState([]);
   return (
     <>
+      <Navbar cartCount={carts.length} onCartClick={() => setActiveTab("Cart")}/>
       <div className="w-[80%] mx-auto">
-        <Navbar />
         <Banner />
       </div>
       <UserCounts />
-      <div className="w-[80%] mx-auto">
-        <Tools productDataPromise={productDataPromise} />
-        <Steps stepDataPromise={stepDataPromise} />
-        <PricingOption pricingPlansPromise={pricingPlansPromise}></PricingOption> 
+      <div id="Products" className="w-[80%] mx-auto">
+        <Tools 
+          productDataPromise={productDataPromise} 
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          carts={carts}
+          setCarts={setCarts}
+        />
       </div>
+      <div id="Features" className="w-[80%] mx-auto">
+        <Steps stepDataPromise={stepDataPromise} />
+        <PricingOption id="Pricing" pricingPlansPromise={pricingPlansPromise} />
+      </div>
+      <div id="Testimonials">
+        <Workflow />
+      </div>
+      <div id="FAQ">
+        <Footer />
+      </div>
+      <ToastContainer position="top-right" autoClose={1000} theme="dark"/>
     </>
   );
 }

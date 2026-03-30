@@ -36,7 +36,7 @@ const page = ({ stepDataPromise }) => {
             {steps.map((step) => {
               const StepIcon = allIcons[step.icon] || null;
               return (
-                <div className="glass card flex bg-linear-to-tl from-violet-200 to-indigo-200 text-white items-center gap-3 h-[400px] w-[400px] mb-20">
+                <div key={step.id} className="glass card flex bg-linear-to-tl from-violet-200 to-indigo-200 text-white items-center gap-3 h-[400px] w-[400px] mb-20">
                   <div className="card-body p-6 flex flex-col items-center justify-center text-center">
                     <div className="flex w-full justify-end items-center mb-14">
                       <span className="flex items-center justify-center text-lg font-bold bg-linear-to-tl from-violet-600 to-indigo-600 text-white h-14 w-14 rounded-full">
