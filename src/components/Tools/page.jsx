@@ -7,13 +7,27 @@ const page = ({ productDataPromise, activeTab, setActiveTab, carts, setCarts }) 
   const productData = use(productDataPromise);
 
   const handleAddToCart = (product) => {
-    toast.success(`${product.name} added to cart!`);
-    setCarts([...carts, product]);
+    const isAlreadyInCart = carts.some((cart) => cart.id === product.id);
+    if(isAlreadyInCart) {
+      toast.success(`Already added ${product.name} to cart!`);
+      setCarts(carts.map(item => 
+        item.id === product.id ?
+        {...item, quantity: item.quantity + 1} : 
+        item
+      ))
+    }
+    //no duplicate, then it will set to quantity 1
+    else{
+      toast.success(`${product.name} added to cart!`);
+      setCarts([...carts, {...product, quantity: 1}]);
+    }
   };
 
   const handleRemoveFromCart = (index) => {
-    toast(`${carts[index].name} removed from cart.`);
-    setCarts(carts.filter((_, i) => i !== index));
+    toast.warn(`${carts[index].name} removed from cart.`);
+    const newCarts = [...carts]
+    newCarts.splice(index, 1);
+    setCarts(newCarts);
   };
 
   return (
@@ -46,7 +60,7 @@ const page = ({ productDataPromise, activeTab, setActiveTab, carts, setCarts }) 
                 : "text-gray-500 hover:text-gray-800"
             }`}
           >
-            Cart ({carts.length})
+            Cart ({carts.reduce((total, item) => total + item.quantity, 0)})
           </button>
         </div>
       </div>
@@ -116,6 +130,7 @@ const page = ({ productDataPromise, activeTab, setActiveTab, carts, setCarts }) 
         <div className="animate-in fade-in slide-in-from-bottom-5 duration-500">
           <Cart 
             carts={carts} 
+            setCarts={setCarts}
             onRemove={handleRemoveFromCart}
             onBack={() => setActiveTab("Products")}
           />
