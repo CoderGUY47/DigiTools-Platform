@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "name": "ChatGPT",
+    "description": "OpenAI's flagship conversational AI that handles writing, coding, analysis, and complex reasoning with unmatched versatility.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "Most Popular",
+    "tagType": "popular",
+    "features": [
+      "GPT-4o model access",
+      "Image generation with DALL·E",
+      "Custom GPTs & plugins",
+      "Advanced data analysis",
+      "Priority response speed"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+  },
+  {
+    "id": 2,
+    "name": "Claude",
+    "description": "Anthropic's safety-first AI renowned for nuanced reasoning, long-context understanding, and thoughtful, accurate responses.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "Best for Writing",
+    "tagType": "best seller",
+    "features": [
+      "200K token context window",
+      "Advanced reasoning & analysis",
+      "Artifacts & code generation",
+      "Document summarization",
+      "Honest & safe responses"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg"
+  },
+  {
+    "id": 3,
+    "name": "Gemini",
+    "description": "Google DeepMind's multimodal AI powerhouse with deep integration into the Google ecosystem and cutting-edge capabilities.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "Google Pick",
+    "tagType": "popular",
+    "features": [
+      "Gemini 1.5 Pro model",
+      "1M token context window",
+      "Google Workspace integration",
+      "Multimodal image & video input",
+      "Real-time web grounding"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
+  },
+  {
+    "id": 4,
+    "name": "Grok",
+    "description": "xAI's witty and unfiltered AI with real-time access to X (Twitter) data, built for curiosity-driven minds.",
+    "price": 8,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Real-time X/Twitter data",
+      "Unfiltered & witty responses",
+      "Image generation",
+      "Aurora image model",
+      "Integrated with X Premium"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/7/73/Grok_logo.png"
+  },
+  {
+    "id": 5,
+    "name": "Perplexity",
+    "description": "The AI-powered answer engine that cites every source — perfect for research, fact-checking, and staying informed.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "Best for Research",
+    "tagType": "best seller",
+    "features": [
+      "Real-time web search",
+      "Cited, sourced answers",
+      "Focus modes (Academic, YouTube, Reddit)",
+      "File & image upload",
+      "Perplexity Pages for reports"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg"
+  },
+  {
+    "id": 6,
+    "name": "Canva AI",
+    "description": "Canva's built-in AI suite supercharges your design workflow with text-to-image, Magic Write, and one-click editing tools.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "Best for Design",
+    "tagType": "popular",
+    "features": [
+      "Magic Design generation",
+      "Text-to-image (Dream Lab)",
+      "Magic Write for copy",
+      "Background & object remover",
+      "1000+ AI-powered templates"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Canva_Logo.png"
+  },
+  {
+    "id": 7,
+    "name": "Blackbox AI",
+    "description": "The developer-first AI coding assistant that autocompletes, explains, and generates code across 20+ programming languages.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Free",
+    "tagType": "new",
+    "features": [
+      "AI code autocomplete",
+      "Code search & explanation",
+      "20+ language support",
+      "VS Code & browser extension",
+      "Code chat assistant"
+    ],
+    "icon": "https://avatars.githubusercontent.com/u/97110344?s=280&v=4"
+  },
+  {
+    "id": 8,
+    "name": "Cursor",
+    "description": "The AI-native code editor built for engineers who want to ship faster — with inline edits, chat, and multi-file context.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "Dev Favorite",
+    "tagType": "best seller",
+    "features": [
+      "Inline AI code editing",
+      "Multi-file codebase context",
+      "Chat with your repo",
+      "Agent mode for autonomous tasks",
+      "GPT-4 & Claude model options"
+    ],
+    "icon": "https://cursor.com/favicon.ico"
+  },
+  {
+    "id": 9,
+    "name": "Emergent",
+    "description": "Emergent builds full-stack web apps from a single prompt — no coding required, just describe and deploy.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Prompt-to-full-stack app",
+      "One-click deployment",
+      "Authentication & database built-in",
+      "React + Node.js output",
+      "Visual editor post-generation"
+    ],
+    "icon": "https://emergent.sh/favicon.ico"
+  },
+  {
+    "id": 10,
+    "name": "DeepSeek",
+    "description": "China's open-source AI marvel that rivals top closed models — delivering elite reasoning and coding at near-zero cost.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Open Source",
+    "tagType": "new",
+    "features": [
+      "DeepSeek-R1 reasoning model",
+      "Advanced math & coding",
+      "Open-source & self-hostable",
+      "128K context window",
+      "API access available"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ec/DeepSeek_logo.svg"
+  },
+  {
+    "id": 11,
+    "name": "Mistral",
+    "description": "Europe's leading open-source AI lab delivering blazing-fast, efficient models that punch above their weight class.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "Open Source",
+    "tagType": "new",
+    "features": [
+      "Mistral Large 2 model",
+      "Multilingual support (7+ languages)",
+      "Function calling & JSON mode",
+      "Self-hostable open weights",
+      "Low-latency API access"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Mistral_AI_logo_%282025%29.svg"
+  },
+  {
+    "id": 12,
+    "name": "Meta AI",
+    "description": "Meta's free, open-source AI assistant powered by Llama — deeply integrated into WhatsApp, Instagram, and Facebook.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Free",
+    "tagType": "popular",
+    "features": [
+      "Llama 3 model (open-source)",
+      "Integrated in WhatsApp & Instagram",
+      "Real-time image generation",
+      "Web search grounding",
+      "Completely free to use"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png"
+  },
+  {
+    "id": 13,
+    "name": "Kimi",
+    "description": "Moonshot AI's long-context specialist from China, capable of reading entire books, codebases, and documents in one shot.",
+    "price": 9.99,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "1M+ token context window",
+      "Full document & book ingestion",
+      "Codebase-level understanding",
+      "Multimodal input support",
+      "Chinese & English bilingual"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Kimi_AI_logo.png"
+  },
+  {
+    "id": 14,
+    "name": "Qwen",
+    "description": "Alibaba's enterprise-grade open-source AI family excelling at multilingual tasks, coding, and math with top-tier benchmarks.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Open Source",
+    "tagType": "new",
+    "features": [
+      "Qwen2.5 model family",
+      "128K context window",
+      "Multilingual (29+ languages)",
+      "Strong math & coding ability",
+      "Open weights & API access"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/2/24/Qwen_logo_2025.png"
+  },
+  {
+    "id": 15,
+    "name": "Nvidia Nemotron",
+    "description": "NVIDIA's enterprise AI model optimized for synthetic data generation, roleplay, and building high-quality training datasets.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "Best for Developers",
+    "tagType": "best seller",
+    "features": [
+      "Nemotron-4 340B model",
+      "Synthetic data generation",
+      "RLHF reward modeling",
+      "Enterprise fine-tuning ready",
+      "Available via NVIDIA NIM API"
+    ],
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg"
+  }
+]
