@@ -9,10 +9,10 @@ const PricingOption = ({pricingPlansPromise}) => {
 
     const displayPricingCard = (plan) => (
       <div 
-        className={`relative flex flex-col p-5 md:p-7 rounded-3xl shadow-xl transition-all duration-500 w-full lg:w-[390px] mx-auto 
+        className={`relative flex flex-col p-5 md:p-8 rounded-3xl shadow-xl transition-all duration-500 w-full lg:w-[390px] mx-auto 
         ${plan.isPopular ? 
-          'bg-violet-600 text-white z-10 lg:scale-105' : 
-          'glass bg-black/90 text-white border-none h-full'}
+          'bg-violet-600 text-white z-10 lg:scale-[1.08] lg:hover:scale-[1.1]' : 
+          'glass bg-black/90 text-white border-none h-full hover:scale-105'}
           `}>
           
           {plan.isPopular && (
@@ -65,8 +65,8 @@ const PricingOption = ({pricingPlansPromise}) => {
               <p className="max-w-2xl font-medium text-gray-400 text-base md:text-xl leading-relaxed mb-6">
                 Choose the plan that fits your needs. Upgrade or downgrade anytime.
               </p>
-                <div className="w-95 space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-14 mb-20 w-full items-center">
+                <div className="w-full flex justify-center">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-14 mb-20 w-full max-w-7xl px-4 md:px-0">
                     {pricingData.map((plan) => (
                       <div key={plan.id} className="w-full px-2 md:px-0">
                         {displayPricingCard(plan)}

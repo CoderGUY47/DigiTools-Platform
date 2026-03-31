@@ -4,7 +4,7 @@ import React from "react";
 const page = ({cartCount, onCartClick}) => {
   return (
     <div className="sticky top-0 z-50 relative bg-white flex items-center py-2 mb-10 shadow-md">
-      <div className="navbar w-[94%] md:w-[85%] lg:w-[80%] mx-auto">
+      <div className="navbar w-[94%] md:w-[85%] lg:w-[60%] mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden -ml-4">

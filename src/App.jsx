@@ -49,11 +49,11 @@ function App() {
 
       {activeTab === "Products" ? (
         <>
-          <div className="w-[94%] md:w-[85%] lg:w-[80%] mx-auto overflow-hidden">
+          <div className="w-[94%] md:w-[85%] lg:w-[74%] mx-auto overflow-hidden">
             <Banner />
           </div>
           <UserCounts />
-          <div id="Products" className="w-[94%] md:w-[85%] lg:w-[80%] mx-auto">
+          <div id="Products" className="w-[94%] md:w-[75%] lg:w-[63%] lg:gap-2 mx-auto">
             <Tools
               productDataPromise={productDataPromise}
               activeTab={activeTab}
@@ -62,10 +62,10 @@ function App() {
               setCarts={setCarts}
             />
           </div>
-          <div id="Features" className="w-[94%] md:w-[85%] lg:w-[80%] mx-auto">
+          <div id="Features" className="w-[94%] md:w-[75%] lg:w-[60%] mx-auto">
             <Steps stepDataPromise={stepDataPromise} />
           </div>
-          <div id="Pricing" className="w-[94%] md:w-[85%] lg:w-[80%] mx-auto">
+          <div id="Pricing" className="w-[94%] md:w-[70%] lg:w-[63%] mx-auto">
             <PricingOption pricingPlansPromise={pricingPlansPromise} />
           </div>
           <Workflow />

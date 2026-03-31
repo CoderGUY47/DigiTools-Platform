@@ -7,7 +7,7 @@ const page = () => {
       <div className="relative mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center space-y-4">
         {/* leftpart */}
         <div className="text-center lg:text-left">
-          <div className="p-2 h-10 w-80 flex items-center justify-center gap-3 text-lg bg-gray-400/45 rounded-full text-indigo-500">
+          <div className="p-2 h-10 w-80 flex items-center justify-center lg:justify-start gap-3 text-lg bg-gray-400/45 rounded-full text-indigo-500 mx-auto lg:mx-0">
             <span className="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></span>
             New: AI-Powered Tools Available
           </div>

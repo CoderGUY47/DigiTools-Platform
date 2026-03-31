@@ -32,7 +32,7 @@ const page = ({ stepDataPromise }) => {
             Start using premium digital tools in minutes, not hours.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14 mb-20 w-full lg:p-1.5 lg:bg-gray-50 lg:rounded-full lg:border lg:border-gray-100 lg:shadow-xs">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-14 mb-20 w-full lg:p-1.5 lg:bg-gray-50 lg:rounded-full lg:border lg:border-gray-100 lg:shadow-xs">
             {steps.map((step) => {
               const StepIcon = allIcons[step.icon] || null;
               return (

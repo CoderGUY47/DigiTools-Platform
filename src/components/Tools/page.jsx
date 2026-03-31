@@ -23,9 +23,9 @@ const page = ({ productDataPromise, activeTab, setActiveTab, carts, setCarts }) 
     }
   };
 
-  const renderProductCard = (product) => (
+  const showProductCard = (product) => (
     <div className="glass card w-full h-full flex flex-col bg-black text-white/80 shadow-[2px_10px_30px_rgba(0,0,0,0.4)] rounded-3xl">
-      <div className="card-body p-8 flex flex-row justify-between items-center gap-2">
+      <div className="card-body p-6 flex flex-row justify-between items-center gap-2">
         <img className="w-16 h-12 object-contain" src={product.icon} alt={product.name} />
         <span className={`badge px-4 py-3 rounded-full text-xs font-semibold uppercase tracking-wider ${
             product.tagType === "popular"
@@ -118,14 +118,14 @@ const page = ({ productDataPromise, activeTab, setActiveTab, carts, setCarts }) 
             <div className="carousel carousel-center w-full space-x-3 px-2 pb-6">
               {productData.slice(0, Math.ceil(productData.length / 2)).map((product) => (
                 <div key={product.id} className="carousel-item w-[94%] sm:w-[80%] md:w-[70%]">
-                  {renderProductCard(product)}
+                  {showProductCard(product)}
                 </div>
               ))}
             </div>
             <div className="carousel carousel-center w-full space-x-3 px-2 pb-6">
               {productData.slice(Math.ceil(productData.length / 2)).map((product) => (
                 <div key={product.id} className="carousel-item w-[94%] sm:w-[80%] md:w-[70%]">
-                  {renderProductCard(product)}
+                  {showProductCard(product)}
                 </div>
               ))}
             </div>
@@ -135,7 +135,7 @@ const page = ({ productDataPromise, activeTab, setActiveTab, carts, setCarts }) 
           <div className="hidden lg:grid w-full mx-auto grid-cols-3 gap-8 px-4">
             {productData.map((product) => (
               <div key={product.id} className="w-full h-full">
-                {renderProductCard(product)}
+                {showProductCard(product)}
               </div>
             ))}
           </div>
