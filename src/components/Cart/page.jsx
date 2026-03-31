@@ -11,11 +11,11 @@ const page = ({carts, onRemove, onBack, setCarts}) => {
   }
 
   const handleRemove = (item, index) => {
-    // parent will manage the removal and synced with navbaar & cart
-    // toast.warn(`${item.name} removed from cart`);
-    // const filteredCarts = carts.filter((cart) => cart.id !== item.id);
-    // setCarts(filteredCarts);
-    onRemove(index);
+    //parent will manage the removal and synced with navbaar & cart, so no need this 3 lines to use
+    //toast.warn(`${item.name} removed from cart`);
+    //const filteredCarts = carts.filter((cart) => cart.id !== item.id);
+    //setCarts(filteredCarts);
+    onRemove(index); //use onRemove as a handleRemove
   }
   return (
     <div>
@@ -41,8 +41,8 @@ const page = ({carts, onRemove, onBack, setCarts}) => {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
                       <p className="text-gray-500 text-lg font-normal">
-                        ${item.price}
-                        {item.quantity>1 && <span className="text-gray-500 text-lg font-normal"> x {item.quantity}</span>}
+                        ${item.price} {item.quantity>1 && 
+                        <span className="text-gray-500 text-lg font-normal"> x {item.quantity}</span>}
                       </p>
                     </div>
                   </div>

@@ -32,26 +32,26 @@ const page = ({ stepDataPromise }) => {
             Start using premium digital tools in minutes, not hours.
           </p>
 
-          <div className="flex items-center gap-3 mt-14 mb-20 p-1.5 bg-gray-50 rounded-full border border-gray-100 shadow-xs">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14 mb-20 w-full lg:p-1.5 lg:bg-gray-50 lg:rounded-full lg:border lg:border-gray-100 lg:shadow-xs">
             {steps.map((step) => {
               const StepIcon = allIcons[step.icon] || null;
               return (
-                <div key={step.id} className="glass card flex bg-linear-to-tl from-violet-200 to-indigo-200 text-white items-center gap-3 h-[400px] w-[400px] mb-20">
-                  <div className="card-body p-6 flex flex-col items-center justify-center text-center">
-                    <div className="flex w-full justify-end items-center mb-14">
-                      <span className="flex items-center justify-center text-lg font-bold bg-linear-to-tl from-violet-600 to-indigo-600 text-white h-14 w-14 rounded-full">
+                <div key={step.id} className="glass card flex flex-col bg-linear-to-tl from-violet-200 to-indigo-200 text-gray-900 justify-center items-center h-auto min-h-[300px] lg:min-h-[400px] w-full max-w-[400px] mx-auto rounded-[3rem] shadow-sm">
+                  <div className="card-body p-8 sm:p-10 w-full flex flex-col items-center justify-center text-center">
+                    <div className="flex w-full justify-end items-center mb-6 lg:mb-14">
+                      <span className="flex items-center justify-center text-base lg:text-lg font-bold bg-linear-to-tl from-violet-600 to-indigo-600 text-white h-12 w-12 lg:h-14 lg:w-14 rounded-full shadow-md">
                         {step.step}
                       </span>
                     </div>
                     <StepIcon
-                      className="bg-linear-to-r from-violet-600 to-indigo-600 text-transparent bg-clip-text w-14 h-14 mb-6"
+                      className="text-indigo-600 w-12 h-12 lg:w-14 lg:h-14 mb-4 lg:mb-6"
                       style={{ fill: "url(#iconGradient)" }}
                       size={56}
                     />
-                    <h3 className="font-bold text-4xl text-gray-900">
+                    <h3 className="font-bold text-2xl lg:text-3xl text-gray-900 mb-3">
                       {step.title}
                     </h3>
-                    <p className="font-light text-base text-gray-500 leading-6">
+                    <p className="font-medium text-sm lg:text-base text-gray-600 leading-relaxed">
                       {step.description}
                     </p>
                   </div>

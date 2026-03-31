@@ -5,7 +5,7 @@ const Workflow = () => {
     <section className="mt-20 w-full mx-auto">
       <div className="bg-linear-to-r from-violet-600 to-indigo-600 md:p-24 py-20 text-center text-white shadow-2xl relative overflow-hidden">
         <div className="relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
             Ready To Transform Your Workflow?
           </h2>
           <p className="max-w-3xl mx-auto text-xl md:text-xl font-normal text-gray-300 mb-7 leading-relaxed">
@@ -21,11 +21,15 @@ const Workflow = () => {
             </button>
           </div>
 
-          <div className="flex flex-wrap  mt-10 items-center justify-center gap-4 text-sm md:text-sm font-semibold text-violet-100/80 uppercase tracking-widest leading-none">
-            <p>14-day free trial</p>
-            <span className="w-1.5 h-1.5 rounded-full bg-violet-200/80"></span>
-            <p>No credit card required</p>
-            <span className="w-1.5 h-1.5 rounded-full bg-violet-200/80"></span>
+          <div className="flex flex-col sm:flex-row mt-10 items-center justify-center gap-4 sm:gap-6 text-sm font-semibold text-violet-100/90 uppercase tracking-widest leading-none">
+            <div className="flex items-center gap-6">
+              <p>14-day free trial</p>
+              <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-violet-200/80"></span>
+            </div>
+            <div className="flex items-center gap-6">
+              <p>No credit card required</p>
+              <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-violet-200/80"></span>
+            </div>
             <p>Cancel anytime</p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { TbBrandInstagramFilled } from 'react-icons/tb';
 
 const Footer = () => {
@@ -60,10 +60,8 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-500 text-lg font-normal">
-            © 2026 Digitools. All rights reserved.
-          </p>
-          <div className="flex gap-8 text-gray-500 text-lg font-normal">
+          <p className="text-gray-500 text-base md:text-lg font-normal">© 2026 DigiTools. All rights reserved.</p>
+          <div className="flex gap-4 md:gap-8 text-gray-500 text-base md:text-lg font-normal">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-white transition-colors">Cookies</a>
