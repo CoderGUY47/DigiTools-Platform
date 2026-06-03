@@ -22,6 +22,7 @@
 
 - [✨ Overview](#-overview)
 - [❌ The Problem & ✅ The Solution](#-the-problem---the-solution)
+- [🚀 Live Link](#-live-link)
 - [💡 Business Value](#-business-value)
 - [🚀 Key Features](#-key-features)
 - [📦 Tech Stack & Architecture](#-tech-stack--architecture)
@@ -48,6 +49,29 @@
 | Inconsistent, mismatched UIs across tool websites | **DaisyUI v5** component library delivering a coherent visual language |
 | No notification when tool actions complete | **react-toastify** inline feedback on every tool action |
 | Cluttered tool pages that overwhelm with options | Clean **card-grid layout** with clear tool categorization |
+
+---
+
+## 🚀 Live Link
+
+→ [View DigiTools Platform Live Demo](https://digitools-platform.vercel.app/)
+
+<br/>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=880&h=495&auto=format&fit=crop" alt="DigiTools Dashboard" width="100%" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover" />
+    </td>
+    <td width="50%">
+      <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=880&h=495&auto=format&fit=crop" alt="DigiTools Interface" width="100%" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>🧰 Multi-Tool Productivity Dashboard</sub></td>
+    <td align="center"><sub>⚡ Developer Utility Hub Interface</sub></td>
+  </tr>
+</table>
 
 ---
 
